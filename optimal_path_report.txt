@@ -1,0 +1,28 @@
+======================================================================
+  OPTIMAL PATH REPORT - Zoldyck Assassination Contract Board
+======================================================================
+  Total Days Used: 81 / 200
+  Final Gold:       2030
+  Final Reputation: 100.00
+  Contracts Done:   6
+  Contracts Failed: 0
+  Contracts Abandoned: 0
+  Final Skills:     {'stealth': 5, 'combat': 6, 'poison': 8, 'intel': 5, 'acrobatics': 6}
+======================================================================
+
+  DAY-BY-DAY ACTION LOG:
+----------------------------------------------------------------------
+   Day |  Loc | Action           |   Gold |    Rep | Details
+----------------------------------------------------------------------
+     1 |    A | TRAVEL           |      0 |  100.0 | Traveling to B (2 days)
+     9 |    B | COMPLETE         |     80 |  100.0 | Completed C003 (+80g, +3.0rep)
+     9 |    B | TRAVEL           |     80 |  100.0 | Traveling to C (2 days)
+    23 |    C | COMPLETE         |    380 |  100.0 | Completed C006 (+300g, +8.0rep)
+    23 |    C | TRAVEL           |    380 |  100.0 | Traveling to D (2 days)
+    40 |    D | COMPLETE         |    880 |  100.0 | Completed C007 (+500g, +10.0rep)
+    40 |    D | TRAVEL           |    880 |  100.0 | Traveling to E (2 days)
+    60 |    E | COMPLETE         |   1480 |  100.0 | Completed C010 (+600g, +12.0rep)
+    71 |    E | COMPLETE         |   1830 |  100.0 | Completed C009 (+350g, +7.0rep)
+    71 |    E | TRAVEL           |   1830 |  100.0 | Traveling to D (2 days)
+    82 |    D | COMPLETE         |   2030 |  100.0 | Completed C008 (+200g, +5.0rep)
+----------------------------------------------------------------------

@@ -1,0 +1,32 @@
+Strategy Document - The Zoldyck Assassination Contract Board
+============================================================
+
+1. Contract Selection Algorithm
+-------------------------------
+Our engine uses a Beam Search algorithm combined with a Greedy Look-Ahead heuristic. Instead of brute-forcing all possible combinations (which is computationally infeasible), the Beam Search explores the top `K` (Beam Width) most promising states at any given day. 
+The selection is driven by a two-phase scoring heuristic:
+- Phase 1 (Days 1-50): Focuses on "Skill Farming". The algorithm prioritizes low-difficulty contracts that are clustered together geographically. It grants bonus points for diversifying skills (leveling up skills that are currently at 0 or 1).
+- Phase 2 (Days 51-200): Shifts to "Profit Maximization". The scoring heavily weights the Gold/Day efficiency, reputation bonuses, and deadline urgency. Overqualified contracts (where player skill > required skill) receive a slight surplus bonus to ensure high win rates.
+
+2. Route Optimization Approach
+------------------------------
+Travel routing is integrated directly into the contract selection heuristic. The engine evaluates "Go and Execute" actions, where the cost of travel (in days) is added to the execution time.
+- The heuristic penalizes long travel times unless the destination offers a cluster of high-value contracts.
+- By looking ahead (Look-Ahead depth = 2), the engine can justify traveling to a distant city if it unlocks a sequence of lucrative contracts, rather than getting stuck at a local maximum in the current city.
+
+3. Modeling Skill Progression
+-----------------------------
+Skill progression is modeled as an exponential enabler. Completing a contract awards XP equal to `Effective Difficulty + 1`. 
+- Traps (once completed) grant extra XP because their effective difficulty is secretly 1 tier higher, reflecting the passage: "The trap that catches the hunter was never a trap — it was a lesson priced in blood."
+- The engine accurately predicts future skill levels during its look-ahead simulations, allowing it to path toward a difficult Phase 2 contract by intentionally taking specific Phase 1 contracts to build the prerequisite skills.
+
+4. Handling Complications and Trap Detection
+--------------------------------------------
+Uncertainty is managed through strict deterministic buffers and expected value (EV) calculations:
+- Complications (20% chance of 1.5x time): We eliminate this risk entirely by scheduling *all* contracts with a mandatory 50% time buffer. The engine will not accept a contract if the buffered time exceeds the deadline.
+- Traps (+1 tier hidden difficulty): Traps are detected upon acceptance. The `TrapHandler` calculates the EV of failing (-10% stacking rep penalty based on current skill gap) versus the EV of abandoning (-1 flat rep penalty). If the expected cost of attempting the trap exceeds 1.5x the abandon cost, the engine intelligently aborts the contract.
+
+5. Tradeoffs Considered
+-----------------------
+- Speed vs. Skill Farming: Early on, the engine trades gold efficiency for speed to complete as many easy contracts as possible. This rapid skill accumulation unlocks the highly profitable tier 4 and 5 contracts later.
+- Gold vs. Risk: We chose a conservative, zero-failure approach. Failing a contract cripples the effective reward multiplier for the rest of the run (-10% stacking). Therefore, taking the -1 reputation penalty to abandon a deadly trap is mathematically vastly superior to risking a catastrophic failure.

@@ -1,0 +1,12 @@
+============================================================
+  MISSION SUMMARY STATISTICS
+============================================================
+  Total Gold Earned:       2030
+  Final Reputation:        100.00%
+  Total Skill Points:      30
+  Contracts Completed:     6
+  Contracts Failed:        0
+  Contracts Abandoned:     0
+  Days Used:               81
+  Gold/Day Efficiency:     25.06
+============================================================

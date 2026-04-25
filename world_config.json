@@ -1,0 +1,185 @@
+{
+  "map": {
+    "cities": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "edges": [
+      {
+        "from": "A",
+        "to": "B",
+        "days": 2
+      },
+      {
+        "from": "A",
+        "to": "C",
+        "days": 3
+      },
+      {
+        "from": "A",
+        "to": "D",
+        "days": 5
+      },
+      {
+        "from": "A",
+        "to": "E",
+        "days": 4
+      },
+      {
+        "from": "B",
+        "to": "C",
+        "days": 2
+      },
+      {
+        "from": "B",
+        "to": "D",
+        "days": 3
+      },
+      {
+        "from": "B",
+        "to": "E",
+        "days": 4
+      },
+      {
+        "from": "C",
+        "to": "D",
+        "days": 2
+      },
+      {
+        "from": "C",
+        "to": "E",
+        "days": 3
+      },
+      {
+        "from": "D",
+        "to": "E",
+        "days": 2
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "contract_id": "C001",
+      "city": "A",
+      "difficulty": 1,
+      "gold_reward": 50,
+      "rep_reward": 2.0,
+      "deadline": 30,
+      "execution_time": 3,
+      "required_skill": "stealth",
+      "required_skill_level": 0,
+      "is_trap": false
+    },
+    {
+      "contract_id": "C002",
+      "city": "A",
+      "difficulty": 1,
+      "gold_reward": 60,
+      "rep_reward": 2.5,
+      "deadline": 40,
+      "execution_time": 2,
+      "required_skill": "combat",
+      "required_skill_level": 0,
+      "is_trap": false
+    },
+    {
+      "contract_id": "C003",
+      "city": "B",
+      "difficulty": 2,
+      "gold_reward": 80,
+      "rep_reward": 3.0,
+      "deadline": 50,
+      "execution_time": 4,
+      "required_skill": "poison",
+      "required_skill_level": 1,
+      "is_trap": false
+    },
+    {
+      "contract_id": "C004",
+      "city": "B",
+      "difficulty": 1,
+      "gold_reward": 45,
+      "rep_reward": 1.5,
+      "deadline": 35,
+      "execution_time": 2,
+      "required_skill": "intel",
+      "required_skill_level": 0,
+      "is_trap": false
+    },
+    {
+      "contract_id": "C005",
+      "city": "C",
+      "difficulty": 2,
+      "gold_reward": 90,
+      "rep_reward": 3.0,
+      "deadline": 60,
+      "execution_time": 5,
+      "required_skill": "acrobatics",
+      "required_skill_level": 1,
+      "is_trap": true
+    },
+    {
+      "contract_id": "C006",
+      "city": "C",
+      "difficulty": 4,
+      "gold_reward": 300,
+      "rep_reward": 8.0,
+      "deadline": 120,
+      "execution_time": 8,
+      "required_skill": "stealth",
+      "required_skill_level": 3,
+      "is_trap": false
+    },
+    {
+      "contract_id": "C007",
+      "city": "D",
+      "difficulty": 5,
+      "gold_reward": 500,
+      "rep_reward": 10.0,
+      "deadline": 150,
+      "execution_time": 10,
+      "required_skill": "combat",
+      "required_skill_level": 4,
+      "is_trap": false
+    },
+    {
+      "contract_id": "C008",
+      "city": "D",
+      "difficulty": 3,
+      "gold_reward": 200,
+      "rep_reward": 5.0,
+      "deadline": 100,
+      "execution_time": 6,
+      "required_skill": "poison",
+      "required_skill_level": 2,
+      "is_trap": true
+    },
+    {
+      "contract_id": "C009",
+      "city": "E",
+      "difficulty": 4,
+      "gold_reward": 350,
+      "rep_reward": 7.0,
+      "deadline": 140,
+      "execution_time": 7,
+      "required_skill": "intel",
+      "required_skill_level": 3,
+      "is_trap": false
+    },
+    {
+      "contract_id": "C010",
+      "city": "E",
+      "difficulty": 5,
+      "gold_reward": 600,
+      "rep_reward": 12.0,
+      "deadline": 180,
+      "execution_time": 12,
+      "required_skill": "acrobatics",
+      "required_skill_level": 5,
+      "is_trap": false
+    }
+  ]
+}
